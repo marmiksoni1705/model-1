@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+        <style>
+            .p1{
+                background-color: aquamarine;
+                width: 500px;
+                height: 700px;
+                border: 1px solid black
+            }
+            input[type="text"]{
+                width:200px;
+                height:50px;
+                margin: 20px 23px 30px 34px;
+                border-radius:  5px;
+                
+            }
+               input[type="number"]{
+                width:200px;
+                height:50px;
+                margin: 20px 23px 30px 34px;
+                border-radius:  5px;
+                
+            }
+            textarea{
+                width:200px;
+                height: 100px;
+                border-radius:  5px;
+                border: 1px solid black;
+                 margin: 10px 13px 10px 14px;
+            }     
+            select{
+                width: 200px;
+                height: 75px;
+                border-radius: 10px ;
+                background-color:green;    
+                color:aliceblue;
+                text-align: center;
+                text-size-adjust: auto;   
+            }
+            button{
+                display: block;
+                width: 200px;
+                height: 100px;
+                text-align: center;
+                border-radius: 5px;
+                background-color: green;
+                color:aliceblue;
+                text-align: center;
+                
+            }
+            button:hover{
+                background-color: aliceblue;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="p1">
+            name:<input name="name" type="text" placeholder="Full name"><br><br>
+            phonenumber:<input name="number" type="number" placeholder="enter the phone Number"><br><br>
+            address:<textarea></textarea><br><br>
+            <h1> Gender</h1>
+                    <input type="radio" name="g"> Male
+                    <input type="radio" name="g"> Female<br>
+            
+                <select name="City" >
+                    <option>Ahemdabad</option>
+                    <option>Surat</option>
+                    <option>Vadodara</option>
+                    <option>Rajkot</option>
+            </select><br><br>
+           <button><a href="page2.html">submit</a></button>
+            
+        </form>
+    </body>
+</html>
