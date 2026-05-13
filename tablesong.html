@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Song Table</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+}
+
+table{
+    width:700px;
+    margin:40px auto;
+    border-collapse:collapse;
+    background:white;
+}
+
+th,td{
+    border:2px solid black;
+    padding:15px;
+    text-align:center;
+}
+
+th{
+    background:lightgray;
+}
+
+audio{
+    width:180px;
+}
+
+a{
+    text-decoration:none;
+    color:blue;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<table>
+
+<tr>
+    <th>Sr.no</th>
+    <th>Song Name</th>
+    <th>Play</th>
+    <th>Download</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>ABC Song</td>
+
+    <td>
+        <audio controls>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+    </td>
+
+    <td>
+        <a href="song.mp3" download>Download</a>
+    </td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Music Song</td>
+
+    <td>
+        <audio controls>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+    </td>
+
+    <td>
+        <a href="music.mp3" download>Download</a>
+    </td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Demo Song</td>
+
+    <td>
+        <audio controls>
+            <source src="demo.mp3" type="audio/mpeg">
+        </audio>
+    </td>
+
+    <td>
+        <a href="demo.mp3" download>Download</a>
+    </td>
+</tr>
+
+</table>
+
+</body>
+</html>
