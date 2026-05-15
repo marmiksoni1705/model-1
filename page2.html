@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-    
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+
     <style>
+
         body{
             display: flex;
             justify-content: center;
@@ -14,43 +15,91 @@
         }
 
         form{
-        background-color: dodgerblue;
-    color: aliceblue;
-    width: 600px;
-    padding: 20px;
-    border: 1px solid black;
-    text-align: center;
+            background-color: dodgerblue;
+            color: aliceblue;
+            width: 600px;
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 10px;
         }
+
         h1{
             text-align: center;
-            display: block;
             font-family: Verdana, sans-serif;
         }
+
         input{
             height: 40px;
-            width:  400px;
+            width: 400px;
             border-radius: 14px;
-            align-items: center;
+            border: none;
+            margin-top: 10px;
+            padding-left: 10px;
             font-family: Cambria, Cochin, Georgia, Times;
-            
         }
+
         button{
             width: 300px;
             height: 50px;
-            align-items:center;
             background-color: #40d6e8;
             color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
         }
+
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+
     </style>
-    </head>
-    <body>
-        <form>
-            <h1>login page</h1>
-            <label>Email-id</label><br>
-            <input type="Email" name="email_id"><br>
-            <label>Password</label><br>
-            <input password="password" name="password"><br><br>
-            <button>submit</button>
-        </form>
-    </body>
+</head>
+
+<body>
+
+    <form onsubmit="return loginPage()">
+
+        <h1>Login Page</h1>
+
+        <label>Email-id</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <label>Password</label><br>
+        <input type="password" id="password" required><br><br>
+
+        <button type="submit"><a href="start.html">submit</a></button>
+
+    </form>
+
+    <script>
+
+        function loginPage(){
+
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if(email == ""){
+                alert("Please Enter Email");
+                return false;
+            }
+
+            if(password == ""){
+                alert("Please Enter Password");
+                return false;
+            }
+
+            alert("Login Successful");
+
+            // Connect to start.html
+            window.location.href = "start.html";
+
+            return false;
+        }
+
+    </script>
+
+</body>
 </html>

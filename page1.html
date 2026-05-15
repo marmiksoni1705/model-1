@@ -1,79 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <style>
-            .p1{
-                background-color: aquamarine;
-                width: 500px;
-                height: 700px;
-                border: 1px solid black
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .p1{
+            background-color: aquamarine;
+            width: 500px;
+            padding: 30px;
+            margin: auto;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea{
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        textarea{
+            height: 100px;
+        }
+
+        select{
+            width: 200px;
+            height: 35px;
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+
+        button{
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form class="p1" onsubmit="return validateForm()">
+
+        <h2>Registration Form</h2>
+
+        Name:<br>
+        <input type="text" id="name" placeholder="Full Name"><br><br>
+
+        Phone Number:<br>
+        <input type="number" id="number" placeholder="Enter Phone Number"><br><br>
+
+        Address:<br>
+        <textarea id="address"></textarea><br><br>
+
+        <h3>Gender</h3>
+
+        <input type="radio" name="g" value="Male"> Male
+        <input type="radio" name="g" value="Female"> Female
+
+        <h3>Choose City</h3>
+
+        <select id="city">
+            <option value="">Select City</option>
+            <option>Ahmedabad</option>
+            <option>Surat</option>
+            <option>Vadodara</option>
+            <option>Rajkot</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        function validateForm(){
+
+            let name = document.getElementById("name").value;
+            let number = document.getElementById("number").value;
+            let address = document.getElementById("address").value;
+            let city = document.getElementById("city").value;
+
+            // Gender validation
+            let gender = document.querySelector('input[name="g"]:checked');
+
+            if(name == ""){
+                alert("Please Enter Name");
+                return false;
             }
-            input[type="text"]{
-                width:200px;
-                height:50px;
-                margin: 20px 23px 30px 34px;
-                border-radius:  5px;
-                
+
+            if(number == ""){
+                alert("Please Enter Phone Number");
+                return false;
             }
-               input[type="number"]{
-                width:200px;
-                height:50px;
-                margin: 20px 23px 30px 34px;
-                border-radius:  5px;
-                
+
+            if(number.length != 10){
+                alert("Phone Number Must Be 10 Digits");
+                return false;
             }
-            textarea{
-                width:200px;
-                height: 100px;
-                border-radius:  5px;
-                border: 1px solid black;
-                 margin: 10px 13px 10px 14px;
-            }     
-            select{
-                width: 200px;
-                height: 75px;
-                border-radius: 10px ;
-                background-color:green;    
-                color:aliceblue;
-                text-align: center;
-                text-size-adjust: auto;   
+
+            if(address == ""){
+                alert("Please Enter Address");
+                return false;
             }
-            button{
-                display: block;
-                width: 200px;
-                height: 100px;
-                text-align: center;
-                border-radius: 5px;
-                background-color: green;
-                color:aliceblue;
-                text-align: center;
-                
+
+            if(gender == null){
+                alert("Please Select Gender");
+                return false;
             }
-            button:hover{
-                background-color: aliceblue;
-                color:black;
+
+            if(city == ""){
+                alert("Please Select City");
+                return false;
             }
-        </style>
-    </head>
-    <body>
-        <form class="p1">
-            name:<input name="name" type="text" placeholder="Full name"><br><br>
-            phonenumber:<input name="number" type="number" placeholder="enter the phone Number"><br><br>
-            address:<textarea></textarea><br><br>
-            <h1> Gender</h1>
-                    <input type="radio" name="g"> Male
-                    <input type="radio" name="g"> Female<br>
-            
-                <select name="City" >
-                    <option>Ahemdabad</option>
-                    <option>Surat</option>
-                    <option>Vadodara</option>
-                    <option>Rajkot</option>
-            </select><br><br>
-           <button><a href="page2.html">submit</a></button>
-            
-        </form>
-    </body>
+
+            alert("Form Submitted Successfully");
+
+            window.location.href = "page2.html";
+
+            return false;
+        }
+
+    </script>
+
+</body>
 </html>

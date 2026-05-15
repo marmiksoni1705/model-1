@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+        <link rel="stylesheet" href="style4.css">
+        <style>
+            body{
+                    margin: 0;
+                    font-family: Arial;
+                    background-color: #f4f4f4;
+                }
+
+
+                nav{
+                    background-color: #000000;
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                }
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+            nav a:hover{
+                color: yellow;
+            }
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+}
+
+.dropdown-content a{
+    color: black;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+.order{
+    background-color: white;
+    height: 400px;
+    width: 320px;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+        
+}
+
+.order img{
+    border-radius: 10px;
+}
+
+button{
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: darkblue;
+}
+        </style>
+    </head>
+    <body>
+            <nav>
+        
+        <a href="start.html">Home</a>
+            <div class="dropdown">
+        <a href="#"> Products ▼</a>
+
+        <div class="dropdown-content">
+            <a href="oder.html">sasumng</a>
+            <a href="">iphone</a>
+            <a href="oder2.html">Laptop</a>
+            <a href="#">Watch</a>
+        </div>
+    </div>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+        <div class="main">
+        <div class="oder">
+              <img src="Screenshot 2026-05-15 102501.png" alt="" width="300px" height="300px"> <br>
+                <p>HP 15, Intel Core Ultra 5 125H (16GB DDR5, 1TB SSD) FHD, IPS</p>
+                <p>₹74,990 </p>
+              <button>addtocart</button>
+            
+        </div>
+               <div class="oder">
+              <img src="Screenshot 2026-05-15 103852.png" alt="" width="300px" height="300px"> <br>
+                <p>acer SmartChoice Aspire Lite, AMD Ryzen 5-5625U Processor, 16 GB/512 GB, Full HD, 15.6"/39.62 cm</p>
+                <p>₹74,990 </p>
+              <button>addtocart</button>
+        </div>
+            <div class="oder">
+              <img src="Screenshot 2026-05-15 111509.png" alt="" width="300px" height="300px"> <br>
+                <p>Lenovo LOQ, AMD Ryzen 5 7235HS, RTX 3050-6GB, 12GB RAM, 512GB SSD, FHD, 15.6"/39.6cm, 144Hz, Windows 11,</p>
+                <p>-19% ₹72,990  </p>
+              <button>addtocart</button>
+            </div>
+        </div>
+       
+    </body>
+</html>
