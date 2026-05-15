@@ -1,83 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Header Footer</title>
-
-    <style>
-
-        body{
-            margin: 0;
-            font-family: Arial;
-        }
-
-       
-        header{
-            background-color: royalblue;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-     
-        nav{
-            background-color: black;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a{
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-
-        nav a:hover{
-            color: yellow;
-        }
-
-     
-        section{
-            padding: 40px;
-            min-height: 300px;
-        }
-
-      
-        footer{
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    
     <header>
         <h1>My E-COMMERCE Website</h1>
         <p>Welcome to My Page</p>
     </header>
 
+  <nav>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="oder.html">Oder</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
+    <a href="#">Home</a>
 
-  
+    <div class="dropdown">
+        <a href="#"> Products ▼</a>
+
+        <div class="dropdown-content">
+            <a href="oder.html">sasumng</a>
+            <a href="oder3.html">iphone</a>
+            <a src="oder2.html">Laptop</a>
+            <a href="#">Watch</a>
+        </div>
+    </div>
+
+    <a href="contect.html">Contact</a>
+    <a href="about.html">About</a>
+
+</nav>
+
+    
+    <div class="slider">
+
+<div class="slides">
+    <img src="Screenshot 2026-05-14 183705.png" class="active" height="100px" width="">
+    <img src="Screenshot 2026-05-14 183949.png">
+    <img src="Screenshot 2026-05-14 184338.png">
+    <img src="Screenshot 2026-05-14 184448.png">
+</div>
+        <button class="btn prev">❮</button>
+        <button class="btn next">❯</button>
+
+    </div>
+
     <section>
         <h2>Main E-Commerce</h2>
-        <p>This is a website is E-Commerce releted projrcted</p>
-        
+        <p>This website is related to E-Commerce projects.</p>
     </section>
+
     <footer>
-        <h1>my  E-COMMERCE</h1>
+        <h2>My E-COMMERCE</h2>
     </footer>
+
+
+
+    <script>
+
+        $(document).ready(function(){
+
+            let slides = $(".slides img");
+            let index = 0;
+
+          
+            function showSlide(i){
+
+                slides.removeClass("active");
+                slides.eq(i).addClass("active");
+            }
+
+            $(".next").click(function(){
+
+                index++;
+
+                if(index >= slides.length){
+                    index = 0;
+                }
+
+                showSlide(index);
+            });
+
+           
+            $(".prev").click(function(){
+
+                index--;
+
+                if(index < 0){
+                    index = slides.length - 1;
+                }
+
+                showSlide(index);
+            });
+
+      
+            setInterval(function(){
+
+                index++;
+
+                if(index >= slides.length){
+                    index = 0;
+                }
+
+                showSlide(index);
+
+            },3000);
+
+        });
+
+    </script>
 
 </body>
 </html>
+
