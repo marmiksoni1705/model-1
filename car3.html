@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+         <link rel="stylesheet" href="oder5.css">
+    <style>      
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #f3f3f3;
+            padding: 20px;
+        }
+
+        .cart-box{
+            width: 950px;
+            background-color: white;
+            border: 1px solid #d6d6d6;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .cart-box img{
+            width: 150px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-details{
+            flex: 1;
+        }
+
+        .product-title{
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .stock{
+            color: red;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .delivery{
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .gift{
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .info{
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .btn-group{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .qty-box{
+            display: flex;
+            align-items: center;
+            border: 2px solid orange;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .qty-box button{
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: #ffd814;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .qty{
+            width: 40px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .links{
+            color: #007185;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .links:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cart-box">
+
+        <img src="Screenshot 2026-05-14 140824.png" alt="Samsung Galaxy S25 Ultra">
+
+        <div class="product-details">
+
+            <h2 class="product-title">
+             Samsung Galaxy A37 5G (Awesome Charcoal, 8GB RAM, 128GB Storage),
+                Agentic AI, Triple Camera with Nightography Video, 
+                2 Days Battery Life, 6 Gen OS Upgrades, IP68, 
+                7.4mm Sleek, with No Cost EMI
+            </h2>
+
+            <p class="stock">Only 1 left in stock.</p>
+
+            <p class="delivery">
+                FREE delivery Thu, 21 May available at checkout
+            </p>
+
+            <p class="gift">
+                <input type="checkbox">
+                This will be a gift
+            </p>
+
+            <p class="info"><b>Colour:</b> Titanium Whitesilver</p>
+
+            <p class="info"><b>Size:</b> 12GB + 256GB</p>
+
+            <p class="info"><b>Style Name:</b> With exchange bonus or No cost EMI</p>
+
+            <div class="btn-group">
+
+                <div class="qty-box">
+                    <button>-</button>
+                    <div class="qty">1</div>
+                    <button>+</button>
+                </div>
+
+                <span class="links">Delete</span>
+
+                <span class="links">Save for later</span>
+
+                <span class="links">See more like this</span>
+
+                <span class="links">Share</span><br><br>
+                <button>submit</button>
+
+            </div>
+
+        </div>
+
+    </div>
+        <script>
+            
+
+    let qty = document.querySelector(".qty");
+
+    let plusBtn = document.querySelectorAll(".qty-box button")[1];
+    let minusBtn = document.querySelectorAll(".qty-box button")[0];
+
+    let count = 1;
+
+    plusBtn.addEventListener("click", function(){
+
+        count++;
+
+        qty.innerHTML = count;
+
+    });
+
+    minusBtn.addEventListener("click", function(){
+
+        if(count > 1){
+
+            count--;
+
+            qty.innerHTML = count;
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
